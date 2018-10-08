@@ -11,6 +11,8 @@
 ```
 
 # 命令说明
-- `npm start`  //启动开发环境，IE8 下测试无效。该模式下便于开发，支持自动编译和热加载
+- `npm start`  //启动开发环境，IE8- 下测试无效。该模式下便于开发，支持自动编译和热加载
 - `npm run start-ie`  //IE8 开发模式，一般用于IE8 下的调试, 不支持自动编译和热加载
 - `npm run build-ie`  //编译兼容IE8 生产环境
+
+由于`webpack-dev-server` 不支持IE8-，所以`start-ie`采用koa启动服务。启动后支持自动编译，但热加载自动刷新页面。简易项目开发时使用`npm start`启动，功能开发完成后用`npm run start-ie`启动在IE8-下进行调试。
