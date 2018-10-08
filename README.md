@@ -16,3 +16,5 @@
 - `npm run build-ie`  //编译兼容IE8 生产环境
 
 由于`webpack-dev-server` 不支持IE8-，所以`start-ie`采用koa启动服务。启动后支持自动编译，但热加载自动刷新页面。简易项目开发时使用`npm start`启动，功能开发完成后用`npm run start-ie`启动在IE8-下进行调试。
+
+`npm run start-ie`启动时，如果需要访问后端数据接口，可以在server.js中设置代理；`npm start`启动时，在webpack.dev.config.js 中设 webpack-dev-server的代理。
